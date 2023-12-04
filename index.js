@@ -1,7 +1,12 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const markdownIt = require('markdown-it');
+const md = new markdownIt();
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const { parse } = require('path');
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -53,11 +58,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'tests',
-        message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them.',
-    },
-    {
-        type: 'input',
         name: 'githubUsername',
         message: 'Please enter your GitHub username.',
     },
@@ -88,6 +88,7 @@ function init() {
             console.log(err);
             return;
         }
+
 })
 });
 }
@@ -98,37 +99,3 @@ init();
 
 
 
-function writeReadme(answers){
-    return `
-    # ${answers.title}
-    
-    ## Description 
-    ${answers.description}
-
-    ## Table of Contents
-    -[Installation](#installation) 
-    -[Usage](#usage)
-    -[Credits](#credits)
-    -[License](#license)
-    -[Features](#features)
-    -[Tests](#tests)
-
-    ## Installation
-    ${answers.installation}
-
-    ## Usage
-    ${answers.usage}
-
-    ## Credits
-    ${answers.credits}
-
-    ## License
-    ${answers.license} license.
-
-    ## Features
-    ${answers.features || 'No features provided'}
-
-    ## Tests
-    ${answers.tests || 'No tests provided'}
-`;
-}
