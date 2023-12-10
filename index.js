@@ -48,11 +48,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'features',
-        message: 'If your project has a lot of features, list them here.',
-    },
-    {
-        type: 'input',
         name: 'contributing',
         message: 'If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so.',
     },
@@ -97,7 +92,7 @@ function init() {
 // Function call to initialize app
 init();
 
-//function writeToFile(fileName, data) {} - This was what was given to us in the starter code.  I'm not sure if I need to use this or not.  I'm not sure how to use it if I do need to use it.
+
 
 
 

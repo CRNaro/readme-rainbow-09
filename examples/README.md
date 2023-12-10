@@ -16,23 +16,23 @@ hi
 - [tests](#tests)
 
 ## Installation
-hi
+ok
 
 ## Usage
-hi
+yes
 
 ## Credits
-hi
+yep
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
  
 https://opensource.org/licenses/MIT
 
 
 
 ## Features
-hi
+yes
 
 ## Tests
-hi
+na

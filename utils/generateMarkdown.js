@@ -1,10 +1,13 @@
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string  
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// TODO: Create a function that returns the license link
 
 
 function renderLicenseBadge(license) {
   if (license === "MIT") {
-    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})\n`;
+    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)]\n`; //(https://opensource.org/licenses/${license})
   }
   if (license === "Apache") {
     return `[![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)]\n`;
@@ -12,16 +15,15 @@ function renderLicenseBadge(license) {
   if (license === "GPL") {
     return `[![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)]\n`;
   }
-  if (license === "DPL") {
-    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)]\n`;
+  if (license === "MPL") {
+    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-brightgreen.svg)]\n`;
   }
   if (license === "none") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)\n`; //Added what Gisela had
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)\n`;
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
 function renderLicenseLink(license) {
   if (license === "MIT") {
     return `https://opensource.org/licenses/MIT\n`;
@@ -32,23 +34,18 @@ function renderLicenseLink(license) {
   if (license === "GPL") {
     return `https://www.gnu.org/licenses/gpl-3.0\n`;
   }
-  if (license === "DPL") {
-    return `https://opensource.org/licenses/DPL\n`;
+  if (license === "MPL") {
+    return `https://opensource.org/licenses/MPL-2.0\n`;
   }
   if (license === "none") {
     return `\n* [License](#license)\n`;
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string  
-// Could update to else/if statements 
-
-// change all answers to answers?
 // TODO: Create a function to generate markdown for README
-
+// Defined sections for the table of contents
 const sections = ['title', 'description', 'installation', 'usage', 'credits', 'license', 'features', 'tests'];
-
+// Defined function to generate markdown for README
 function generateMarkdown(answers) {
   const licenseBadge = renderLicenseBadge(answers.license);
   const licenseLink = renderLicenseLink(answers.license);
@@ -89,5 +86,5 @@ ${answers.features || "No features provided"}
 ${answers.tests || "No tests provided"}
 `;
 }
-
+// Exports the generateMarkdown function for use in index.js
 module.exports = generateMarkdown;
