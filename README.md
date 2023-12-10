@@ -40,7 +40,9 @@ https://opensource.org/licenses/MIT
 
 
 ## Features
-No features provided
+- HTML
+- JavaScript
+- node.js
 
 ## Tests
 n/a
