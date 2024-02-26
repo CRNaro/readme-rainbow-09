@@ -44,7 +44,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function to generate markdown for README
 // Defined sections for the table of contents
-const sections = ['title', 'description', 'installation', 'usage', 'credits', 'license', 'features', 'tests'];
+const sections = ['title', 'description', 'installation', 'usage', 'credits', 'license', 'features', 'tests','contact'];
 // Defined function to generate markdown for README
 function generateMarkdown(answers) {
   const licenseBadge = renderLicenseBadge(answers.license);
@@ -84,6 +84,11 @@ ${answers.features || "No features provided"}
 
 ## Tests
 ${answers.tests || "No tests provided"}
+
+## Contact 
+GitHub: [${answers.githubUsername}](http://github.com/${answers.githubUsername})\n
+Email: ${answers.email}
+
 `;
 }
 // Exports the generateMarkdown function for use in index.js

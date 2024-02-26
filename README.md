@@ -26,6 +26,11 @@ The intended use is for creating a template to create README files quicker and e
 ![Alt text](./screenshot-03.png)
 ![Alt text](./screenshot-04.png)
 
+## Walkthrough Videos
+[!Vid1](/Users/chris/Documents/GitHub/Projects/readme-rainbow-09/readmerainbowvid.webm)
+[!Vid2](/Users/chris/Documents/GitHub/Projects/readme-rainbow-09/readmerainbowvid2.webm)
+
+
 ## Credits
 - https://stackoverflow.com
 - https://www.w3schools.com
